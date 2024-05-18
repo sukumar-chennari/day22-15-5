@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Layout Using Grid</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+       
+        #container{
+            border: 1px solid yellow;
+            background-color: yellow;
+            display: grid;
+            
+            width: 100%;
+            grid-template-columns: repeat(3,100px) ;
+            grid-template-rows: repeat(4,100px)  ;
+            justify-content: center; 
+        }
+
+        #container div{
+            text-align: center;
+            border: 1px solid red;
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        .a:hover{
+            
+            background-color: red;
+        }
+
+        .b:hover{
+            background-color: #66ff99;
+        }
+        .c:hover{
+            background-color:#1a1aff;
+        }
+        .d:hover{
+            background-color: 	 #ff751a;
+        }
+        .e:hover {
+            background-color:   #808000;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="a" style="grid-column: 1/4; ">Header Section </div>
+        <div class="b" style="grid-column: 1/4;">Navigation</div>
+        <div class="c" style="grid-column: 1/2; ">Index</div>
+        <div class="d" style="grid-column: 2/4; ">Content Section</div>
+        <div class="e" style="grid-column: 1/4;">Footer Section</div>
+    </div>
+</body>
+</html>

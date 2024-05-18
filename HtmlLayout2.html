@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Layout 2</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,200px);
+            grid-template-rows:repeat(5,50px) ;
+            height: 500px;
+            width: 500px;
+            justify-content: center;
+            gap: 4px;
+            text-align: center;
+            align-content: center;
+            background-color: bisque;
+        }
+
+        #container>div{
+            box-shadow: 1px 1px gray;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div style="grid-column: 1/3;"> Header</div>
+        <div style="grid-column: 1/3;" >nav</div>
+        <div style="grid-column: 1/2;">section</div>
+        <div style="grid-column: 2/3; grid-row:3/5">aside</div>
+        <div style=" grid-column:1/2; grid-row: 3/4;">article</div>
+        <div style="grid-column: 1/3; ">footer</div>
+    </div>
+</body>
+</html>
